@@ -32,6 +32,38 @@ frame_baixo.grid(row = 1, column = 0, sticky=NW)
 estilo = ttk.Style(janela)
 estilo.theme_use('clam')
 
+# configurando frame cima
+app_1 = Label(frame_cima, text='Você', height=1, anchor='center', font=('Ivy 10 bold'), bg=co1, fg=co0)
+app_1.place(x=25, y=70)
+app_1_linha = Label(frame_cima, text='', height=10, anchor='center', font=('Ivy 10 bold'), bg=co0, fg=co0)
+app_1_linha.place(x=0, y=0)
+app_1_pontos = Label(frame_cima, text='0', height=1, anchor='center', font=('Ivy 10 bold'), bg=co1, fg=co0)
+app_1_pontos.place(x=50, y=20)
 
+app_ = Label(frame_cima, text=':', height=1, anchor='center', font=('Ivy 30 bold'), bg=co1, fg=co0)
+app_.place(x=125, y=-20)
+
+app_2_pontos = Label(frame_cima, text='0', height=1, anchor='center', font=('Ivy 30 bold'), bg=co1, fg='co0')
+app_2_pontos.place(x=120, y=-20)
+app_2 = Label(frame_cima, text='PC', heigth=1, anchor='center', font=('Ivy 10 bold'), bg=co1, fg=co0)
+app_2.place(x=205, y=70)
+app_2_linha = Label(frame_cima, text='', heigth=10, anchor='center', font=('Ivy 10 bold'), bg=co0, fg=co0)
+app_2_linha.place(x=255, y=0)
+
+app_linha = Label(frame_cima, text='', width=255, anchor='center', font=('Ivy 1 bold'), bg=co0, fg=co0)
+app_linha.place(x=0, y=95)
+
+app_pc = Label(frame_baixo, text='', height=1, anchor='center', font=('Ivy 10 bold'), bg=co0, fg=co0)
+app_pc.place(x=190, y=10)
+
+global voce
+global pc
+global rondas
+global pontos_voce
+global pontos_pc
+
+pontos_voce = 0
+pontos_pc = 0
+rondas = 5
 
 janela.mainloop()
