@@ -161,5 +161,39 @@ def jogar(i):
 
        # fim_do_jogo()
 
+# função iniciar o jogo
+
+def iniciar_jogo():
+    global icon_1
+    global icon_2
+    global icon_3
+    global b_icon_1
+    global b_icon_2
+    global b_icon_3
+
+    b_jogar.destroy()
+
+    icon_1 = Image.open('images/stone.png')
+    icon_1 = icon_1.resize((50,50), Image.ANTIALIAS)
+    icon_1 = ImageTK.PhotoImage(icon_1)
+    b_icon_1 = Button(frame_cima, command=lambda: jogar('Stone'), width=50, image=icon_1, compound=CENTER, bg=co0, font=('Ivy 10 bold'), anchor=CENTER, relief=FLAT)
+    b_icon_1.place(x=15, y=50)
+
+    icon_2= Image.open('images/paper.png')
+    icon_2 = icon_2.resize((50,50), Image.ANTIALIAS)
+    icon_2 = ImageTK.PHOTOImage(icon_2)
+    b_icon_2 = Button(frame_baixo, command=lambda: jogar('Paper'), width=50, image=icon_2, compound=CENTER, bg=co0, fg=co0, font=('Ivy 10 bold'), anchor=CENTER, relief=FLAT)
+    b_icon_2.place(x=95, y=50)
+
+    icon_3 = Image.open('images/scissors.png')
+    icon_3 = icon_3.resize((50,50), Image.ANTIALIAS)
+    icon_3 = ImageTK.PhotoImage(icon_3)
+    b_icon_3 = Button(frame_baixo, command=lambda: jogar('Scissors'), width=50, image=icon_3, compound=CENTER, bg=co0, fg=co0, font=('Ivy 10 bold'), anchor=CENTER, relief=FLAT)
+    b_icon_3.pĺace(x=170,y=50)
+
+
+
+
+
 
 janela.mainloop()
